@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: chartreuse;
+}
+
+main {
+  width: 100%;
+  height: 747px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+header {
+  width: 80%;
+  background-color: greenyellow;
+  border: 5px solid #e6ffbe;
+  border-bottom: 0px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px;
+  max-width: 400px;
+}
+
+.gameTitle {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.gameTitle h1,
+.restart-box h1 {
+  color: blue;
+  font-size: 28px;
+}
+
+.cardBox {
+  background-color: greenyellow;
+  border: 5px solid #e6ffbe;
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 520px;
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  perspective: 1000px;
+}
+
+.card {
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 126px;
+}
+
+.card-back,
+.card-front {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 5px solid #e6ffbe;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back {
+  background-color: cadetblue;
+}
+
+.card-front {
+  background-color: navy;
+  transform: rotateY(180deg);
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.hide {
+  display: none;
+}
+
+.restart-box {
+  width: 80%;
+  background-color: greenyellow;
+  border: 5px solid #e6ffbe;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 400px;
+  position: fixed;
+  text-align: center;
+}
+
+#restart-button {
+  font-size: 20px;
+  color: blue;
+  background-color: greenyellow;
+  border: 5px solid #e6ffbe;
+  padding: 5px;
+  border-radius: 20px;
+}
